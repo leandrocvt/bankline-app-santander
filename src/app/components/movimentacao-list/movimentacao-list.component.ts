@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CorrentistaService } from 'src/app/services/correntista.service';
 import { MovimentacaoService } from 'src/app/services/movimentacao.service';
 
+
 @Component({
   selector: 'app-movimentacao-list',
   templateUrl: './movimentacao-list.component.html',
@@ -13,8 +14,9 @@ export class MovimentacaoListComponent implements OnInit {
   correntista:any;
 
   constructor(
-      private movimentacaoService: MovimentacaoService, 
-      private correntistaService: CorrentistaService) {}
+      private movimentacaoService: MovimentacaoService,
+      private correntistaService: CorrentistaService
+      ) { }
 
   ngOnInit(): void {
     this.exibirCorrentistas();
@@ -41,4 +43,5 @@ export class MovimentacaoListComponent implements OnInit {
           console.log(error);
         });
   }
+
 }
